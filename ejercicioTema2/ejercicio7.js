@@ -1,8 +1,15 @@
 var dato = parseInt(prompt("Introduce un numero positivo:"));
-for (let i = 1; i <= dato; i++) {
-    if (i%2==0) {
-        alert(i);
+ var guardarnum = `Numeros pares hasta ${dato} son: `;
+    for (let i = 2; i <= dato; i+=2) {
+          guardarnum += `${i},`
+    } 
+    window.onload = function(){
+        document.getElementById("valor_entrada").innerHTML = dato;
+        document.getElementById("valor_salida").innerHTML = guardarnum;
     }
-    
-    
-}
+
+
+
+
+
+

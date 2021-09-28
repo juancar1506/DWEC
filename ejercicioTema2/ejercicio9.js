@@ -1,11 +1,14 @@
-do{
-var x = parseInt(prompt("Introduzaca el numero que va a multiplicar:"));
-}while(x<-50 && x>50);
 
-do{
-var y = parseInt(prompt("Introduzca hasta que numero quiere multiplicarlo:"));
-}while(y<1 && y>20);
+var numeros = prompt("Introduzaca los numeros que va a multiplicar:");
 
-for (let i = 1; i < y; i++) {
-    alert(x+" x "+i+" = "+(x*i));
+var num = numeros.split(' ',2);
+
+var salida = "";
+
+for (let i = 1; i <= num[1]; i++) {
+    salida += `${num[0]} x ${i} = ${num[0]*i} <br/>`;
+}
+window.onload = function(){
+    document.getElementById("valor_entrada").innerHTML = numeros;
+    document.getElementById("valor_salida").innerHTML = salida;
 }

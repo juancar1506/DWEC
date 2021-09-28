@@ -1,0 +1,12 @@
+var cant = parseInt(prompt("Introduzca cuantos asteriscos quiere: "));
+
+for (let i = 0; i < cant; i++) {
+    for (let j = 0; j <= i; j++) {
+        document.write('*');    
+        
+    }    
+    document.write('<br/>');
+}
+
+
+
