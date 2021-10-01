@@ -1,5 +1,5 @@
-var dato = parseInt(prompt("Introduce un numero positivo:"));
- var guardarnum = `Numeros pares hasta ${dato} son: `;
+let dato = parseInt(prompt("Introduce un numero positivo:"));
+let guardarnum = `Numeros pares hasta ${dato} son: `;
     for (let i = 2; i <= dato; i+=2) {
           guardarnum += `${i},`
     } 

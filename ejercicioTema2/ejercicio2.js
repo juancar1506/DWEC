@@ -1,8 +1,8 @@
-var nombre = prompt("Introduce tu nombre:");
-var apellidos = prompt("Introduce tu apellido:");
-var dato1 = parseInt(prompt("Introduce el primer numero:"));
-var dato2 = parseInt(prompt("Introduce el segundo numero:"));
-var dato3 = parseInt(prompt("Introduce el tercer numero:"));
+let nombre = prompt("Introduce tu nombre:");
+let apellidos = prompt("Introduce tu apellido:");
+let dato1 = parseInt(prompt("Introduce el primer numero:"));
+let dato2 = parseInt(prompt("Introduce el segundo numero:"));
+let dato3 = parseInt(prompt("Introduce el tercer numero:"));
 
 alert("Tu usuario es : "+ nombre+" "+apellidos);
 

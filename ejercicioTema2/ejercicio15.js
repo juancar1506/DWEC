@@ -11,9 +11,9 @@ function esPrimo(num){
     }
 } 
 
-var entrada = parseInt(prompt("Introduzca un numero: "));
+let entrada = parseInt(prompt("Introduzca un numero: "));
 
-var salida = esPrimo(entrada);
+let salida = esPrimo(entrada);
     window.onload = function(){
         document.getElementById("valor_entrada").innerHTML = entrada;
         document.getElementById("valor_salida").innerHTML = salida;

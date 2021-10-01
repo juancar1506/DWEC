@@ -20,8 +20,8 @@ window.onload = function(){
     }      
 }
 
-var dato = parseFloat(prompt("Escriba el numero que qquiera anlizar entre 0 y 10 (0.0):"));
-var mensaje = "";
+let dato = parseFloat(prompt("Escriba el numero que qquiera anlizar entre 0 y 10 (0.0):"));
+let mensaje = "";
 if (isNaN(dato) == false){
     obtenerCalificacion(dato);
 }else{

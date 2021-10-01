@@ -13,11 +13,11 @@ function comprobarNumeros(nums){
     return comprobar;
 }
 
-var entrada = prompt("Introduzca los dos numeros que quiera sumar separados por coma:");
-var nums = entrada.split(',');
+let entrada = prompt("Introduzca los dos numeros que quiera sumar separados por coma:");
+let nums = entrada.split(',');
 
 if (comprobarNumeros(nums)==true){
-    var salida = suma(parseInt(nums[0]),parseInt(nums[1]));
+    let salida = suma(parseInt(nums[0]),parseInt(nums[1]));
     window.onload = function(){
         document.getElementById("valor_entrada").innerHTML = entrada;
         document.getElementById("valor_salida").innerHTML = salida;
