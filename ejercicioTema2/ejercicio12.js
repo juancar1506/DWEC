@@ -4,7 +4,7 @@ function suma(a,b) {
 }
 function comprobarNumeros(nums){
     for (let i = 0; i < nums.length; i++) {
-        var comprobar = false;
+        let comprobar = false;
         if (isNaN(nums[i])== false) {
             comprobar = true;
         
