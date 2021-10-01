@@ -6,6 +6,8 @@ function esPrimo(num){
             }
         }
         return true;
+    }else{
+        return false;
     }
 } 
 
