@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        let midiv=document.getElementsByTagName('div');
+        let todoDiv=midiv[0].childNodes; 
+        let nchild=todoDiv.length //7
+
+        function colocarCantidad(){
+            document.querySelector('idContenido').innerHTML=`${nchild}`;
+            let sele =document.querySelectorAll('idContenido2');
+            sele.forEach(function e(){
+                document.innerHTML= `esto es el ${e}`;
+            }); 
+        }
+        let inp = document.querySelector('input');
+        inp.setAttribute('onclick','colocarCantidad()');
+    </script>
+    <div>
+    <p>parrafo 1</p>
+    <p>parrafo 2</p>
+    <p>parrafo 3</p>
+    </div>
+    <form>
+    <input type="button" value="Cantidad de hijo del DIV">
+    </form>
+    <p id="idContenido"></p>
+    <p id="idContenido2"></p>
+    <p id="idContenido2"></p>
+    <p id="idContenido2"></p>   
+ 
+</body>
+</html>

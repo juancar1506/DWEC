@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    h1{
+        font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+        margin-left: 2rem;
+    }
+    .titulo2{
+        font-size: small;
+    }
+
+    #color{
+        color: red;
+    }
+</style>
+<body>
+    <h1>Este es un titulo dinamico</h1>
+    <input type="button" value="Cambiar Color" onclick="CambColor()">
+    <input type="button" value="Cambiar Tamano fuente" onclick="CambFont()">
+    <script>
+
+        function CambColor(){
+            document.querySelector('h1').setAttribute('id','color');
+        }
+
+        function CambFont(){
+            document.querySelector('h1').setAttribute('class','titulo2');
+        }
+    </script>
+</body>
+</html>

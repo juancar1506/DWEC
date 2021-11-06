@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div>
+        <h1>Primer Bloque</h1>
+        <p>Esto es un parrafo</p>
+        <p>Esto es un parrafo</p>
+        <p>Esto es un parrafo</p>
+    </div>
+    <div id="bloque2">
+        <h1>Segundo Bloque</h1>
+        <p>Esto es un parrafo</p>
+        <p>Esto es un parrafo</p>
+        <p>Esto es un parrafo</p>
+    </div>
+    <input type="button" value="Agregar un punto a cada parrafo" onclick="colocarPunto()">
+    <script>
+        let div2 = document.getElementById('bloque2');
+        let pdiv2 = document.getElementsByTagName('p');
+      function colocarPunto(){ 
+        for (let i = 3; i < pdiv2.length; i++) {
+            pdiv2[i].innerHTML = 'Esto es un parrafo.';
+        }
+      }  
+    </script>
+</body>
+</html>
