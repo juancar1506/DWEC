@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Actividad 4.4</title>
+</head>
+<body>
+    <div>
+        <p>Lista de la compra</p>
+        <ul>
+            <li>Az&uacute;car</li>
+            <li>Cerveza</li>
+            <li>Pan</li>
+            <li>Patatas</li>
+        </ul>
+        <input type="text" placeholder="Introduzca un producto"><br/>
+        <input type="button" value="Añadir" onclick="Anadir()">
+    </div>
+    <script>
+        function Anadir(){
+            let lista = document.querySelectorAll('li')
+            let arr = []
+            for (let u = 0; u < lista.length; u++) {
+               if(arr[u]!=lista[u].firstChild) 
+                 arr.push(lista[u].firstChild)                
+            }
+            let nuevoLi
+            arr.sort()
+        }
+    </script>
+</body>
+</html>

@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>4.2</title>
+</head>
+<body>
+    <form action="">
+        <label>Numero de checkbox <input type="text" placeholder="Escriba aqui">
+            <input type="button"  onclick="crearCheckbox()" value="Crear Checkbox"/></label>
+    </form>
+    <script>
+        function crearCheckbox() {
+            let body = document.querySelector('body')
+            let valor = parseInt(document.querySelector('input[type=text]').value)
+            let i =0
+            while (i<valor) {
+            let label = document.createElement('label')
+            let nuevaCk = document.createElement('input')
+            nuevaCk.setAttribute('type','checkbox')
+            label.appendChild(nuevaCk)
+            let txtlabel = document.createTextNode(Math.random())
+            label.appendChild(txtlabel)
+            body.appendChild(document.createElement('br'))
+            body.appendChild(label)
+            i++
+            }
+        }
+    </script>
+</body>
+</html>

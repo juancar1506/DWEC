@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>4.1</title>
+</head>
+<body>
+    <ul>
+        <li>Primer elemento</li>
+        <li>Segundo elemento</li>
+    </ul>
+    <input type="button" onclick="InsertarAleatorio()" value="InsertarAleatorio">
+    <input type="button" onclick="eliminarAleatorio()" value="EliminarAleatorio">
+    <script>
+        function InsertarAleatorio() {
+            let ul = document.querySelector('ul')
+
+            let nuevoli = document.createElement('li')
+
+            let textoli = document.createTextNode('Nuevo Elemento: '+Math.random())
+
+            nuevoli.appendChild(textoli)
+
+            ul.appendChild(nuevoli)
+        }
+        function eliminarAleatorio(){
+            let ul = document.querySelector('ul');
+            let Tli = document.querySelectorAll('li')
+            let max = parseInt(Math.random()*Tli.length)
+            let liAleatorio = ul.querySelector(`li:nth-of-type(${max})`)
+            if (liAleatorio != null) {
+                liAleatorio.remove()
+            } else {
+                alert('No hay mas elementos que borrar')
+            }
+        }
+    </script>
+</body>
+</html>

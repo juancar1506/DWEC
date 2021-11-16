@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>4.3</title>
+    <style>
+        div{
+            font-weight: 900;
+            font-family: Arial, Helvetica, sans-serif;
+        }
+        .sincontestar{
+            color: red;
+        }
+        .contestado{
+            color: green;
+        }
+        .respuesta{
+            color: blue;
+            font-size: small;
+        }
+    </style>
+</head>
+<body>
+    <form action="">
+        <label>¿Mi deporte favorito?<input type="text" placeholder="Esribe aqui"><br/></label>
+        <label>¿Mi serie favorita?<input type="text"  placeholder="Esribe aqui"><br/></label>
+        <label>¿Mi pelicula favorita?<input type="text"  placeholder="Esribe aqui"></label><br/>
+        <input type="button" value="Aceptar Aficiones" onclick="CompletarListado()">
+    </form>
+  <div>  
+    <h1>Mis aficiones.....</h1>
+    <h3 class="sincontestar" name="enunciado">¿Mi deporte favorito?</h3>
+    <h3 class="sincontestar" name="enunciado">¿Mi serie favorita?</h3>
+    <h3 class="sincontestar" name="enunciado">¿Mi pelicula favorita?</h3>
+  </div> 
+  <script>
+        let lista = new Set()
+      function CompletarListado(){
+         
+        let titulo = document.querySelectorAll('h3')
+        let Arrtxt = document.querySelectorAll('input[type=text]')
+        let nuevoP = document.createElement('h4')
+ 
+    
+       for (let i = 0; i < Arrtxt.length; i++) {
+           let valor = Arrtxt[i].value   
+           lista.add(valor)
+           if (valor!='') {
+                let txtP = document.createTextNode(valor)
+                nuevoP.appendChild(txtP)
+                nuevoP.classList.add('respuesta')
+                    titulo[i].appendChild(nuevoP)
+                    titulo[i].classList.replace('sincontestar','contestado')
+           }           
+             
+       } 
+        
+      }
+  </script> 
+</body>
+</html>
