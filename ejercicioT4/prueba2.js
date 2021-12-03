@@ -31,13 +31,14 @@ function tipoBarco(){
 var barcos = null;
 
 function generarBarco() {
-    barcos = new Array(5);
+    barcos = new Array(6);
     for (let i = 0; i < barcos.length; i++) {
         barcos[i] = new Array(4);
         barcos[i][0] = posicion();
         barcos[i][1] = posicion();
         barcos[i][2] = eje();
         barcos[i][3] = tipoBarco();
+    
         if(barcos[i][3]==1){
             barcos[i][4]= 'fragatas';
 
@@ -466,7 +467,8 @@ function comprobarBarco() {
                         break;
                 }
 
-            } else {
+            } 
+            if(barcos[i][2]=='horizontal') {
                 switch (barcos[i][0]) {
                     case 0:
                         if(barcos[i][1]==0){
@@ -597,7 +599,7 @@ function comprobarBarco() {
                                 generarBarco();
                             }
                         }
-                        if(barcos[i][1]>9 && barcos[i][1]<0){
+                        if(barcos[i][1]>0 &&barcos[i][1]<9){
                         if (comprobarPosicion(barcos[i][0], barcos[i][1]) == false) {
                             barcos = null;
                             generarBarco();
@@ -1149,7 +1151,8 @@ function comprobarBarco() {
                         colocar(barcos[i][0], barcos[i][1] + 2);
                         break;
                 }
-            } else {
+            } 
+            if(barcos[i][2]=='horizontal')  {
                 switch (barcos[i][0]) {
                     case 0:
                         if( barcos[i][1]==9){
@@ -1427,7 +1430,7 @@ function comprobarBarco() {
                                     generarBarco();
                                 }
                             }
-                            if(barcos[i][0]>0 && barcos[i][1]<9){
+                            if(barcos[i][1]>0 && barcos[i][1]<9){
                         if (comprobarPosicion(barcos[i][0], barcos[i][1]) == false) {
                             barcos = null;
                             generarBarco();
@@ -1591,7 +1594,7 @@ function comprobarBarco() {
       
         
     }
-    
+    console.log(barcos);
 }
 var tablero = new Array(10);
 
@@ -1603,12 +1606,16 @@ for (let i = 0; i < tablero.length; i++) {
 }
 
 
-function comprobarPosicion(X, Y) {
+function comprobarPosicion(X,Y) {
+ if((X>=0 && X<=9 ) && (Y>=0 && Y<=9)){   
     if (tablero[Y][X] == 0) {
         return true;
     } else {
         return false;
     }
+}else{
+    return false;
+}  
 }
 function colocar(X,Y){
     tablero[Y][X]=1;
@@ -1634,4 +1641,4 @@ function verInfoJ() {
 generarBarco();
 comprobarBarco();
 console.log(tablero);
-console.log(barcos);
+
