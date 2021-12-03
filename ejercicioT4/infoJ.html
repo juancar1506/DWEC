@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+
+    <title>Informacion Jugador</title>
+</head>
+
+<body>
+
+</body>
+<script>
+    let jugador = window.opener.jugador1;
+    let body = document.querySelector('body');
+    let h1 = document.createElement('h1');
+    let InfoA = document.createTextNode('Informacion del Autor:')
+    let p1 = document.createElement('p');
+    let p2 = document.createElement('p');
+    let p3 = document.createElement('p');
+    let p4 = document.createElement('p');
+    let nombre = document.createTextNode('Nombre: ' + jugador.toString());
+    let edad = document.createTextNode('Edad:' + jugador.edad);
+    let genero = document.createTextNode('Genero:' + jugador.genero);
+    let puntuacion = document.createTextNode(jugador.puntuacion(2,1));
+    p4.appendChild(puntuacion);
+    p3.appendChild(genero);
+    p2.appendChild(edad);
+    p1.appendChild(nombre);
+    body.appendChild(h1);
+    body.appendChild(p1);
+    body.appendChild(p2);
+    body.appendChild(p3);
+    body.appendChild(p4);
+</script>
+</html>
