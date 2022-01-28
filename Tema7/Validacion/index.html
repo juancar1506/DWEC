@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Validacion</title>
+    <script src="script.js" defer></script>
+    <style>
+        form{
+            background: cyan;
+            width: 300px;
+            padding:20px  10px 20px;
+        }
+
+       
+    </style>
+</head>
+<body>
+    <form action="" name="formulario">
+        <label for="idNombre">Nombre: </label><input type="text" name="nombre" id="idNombre" />
+        <br><br>
+        <label for="idApellidos">Apellidos: </label><input type="text" name="apellidos" id="idApellidos"/>
+        <br><br>
+        <label for="idEdad">Edad: </label><input type="number" name="edad" id="idEdad" min="0" max="130"/>
+        <br><br>
+        <label for="idDni">DNI: </label><input type="text" name="dni" id="idDni" placeholder="0000000A"/>
+        <br><br>
+        <label for="idProvincia">Provincia: </label>
+        <select name="provincia" id="idProvincia">
+            <option value="Madrid">Madrid</option>
+            <option value="Cataluña">Cataluña</option>
+            <option value="Andalucia">Andalucia</option>
+            <option value="Castilla y León">Castilla y León</option>
+            <option value="Pais Vasco">Pais Vasco</option>
+            <option value="Aragon">Aragon</option>
+            <option value="Castilla La Mancha">Castilla La Mancha</option>
+            <option value="Galicia">Galicia</option>
+            <option value="Cantabria">Cantabria</option>
+            <option value="Asturias">Asturias</option>
+        </select>
+        <br><br>
+        <button id="idLimpiar" type="reset">Limpiar</button>
+        <button id="idEnviar" type="submit">Enviar</button>
+    </form>
+</body>
+</html>

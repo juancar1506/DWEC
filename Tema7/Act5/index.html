@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Eventos y Fromularios</title>
+    <script type="text/javascript" src="script.js" defer></script>
+    <style>
+        #idForm{
+            background-color:gold;
+            padding: 5pt;
+            margin: 10pt;
+            width: min-content;
+            border-radius: 10pt;
+        }
+        #idForm h1{
+            text-align: center;
+        }
+        #idMostrar{
+            background-color: orange;
+            width: min-content;
+            padding: 5pt;
+            border-radius: 10pt;
+        }
+        .oculto{
+            display: none;
+        }
+    </style>
+</head>
+<body>
+    <form id="idForm"><h1>Formulario</h1>
+        <label>Texto: <input type="text" name="texto" id="idTexto" ></label><br><br>
+        <label>Number: <input type="number" name="num" id="idNumber"></label><br><br>
+        <label>Contraseña: <input type="password" name="passwd" id="idPasswd"></label><br><br>
+        <input type="hidden" name="oculto" id="idHidden"><br><br>
+        <label>Selecciona un color: <input type="color" name="color" id="idColor"></label><br><br>
+        <label>Elige la fecha: <input type="date" name="fecha" id="idDate"></label><br><br>
+        <label>Correo <input type="email" name="mail" id="idEmail"></label><br><br>
+        <label>Archivo <input type="file" name="archivo" id="idFile"></label><br><br>
+        <textarea name="area" id="idTextTarea" cols="30" rows="10"></textarea><br><br>
+        <label>Selecciona una opcion: 
+            <select name="select" id="idSelect">
+                <option value="op1">op1</option>
+                <option value="op2">op2</option>
+                <option value="op3">op3</option>
+            </select>
+        </label><br><br>    
+    <label>Eliga una opcion:    
+    <input list="idlista">
+        <datalist id="idlista">
+            <option value="op1">op1</option>
+            <option value="op2">op2</option>
+            <option value="op3">op3</option>
+        </datalist>
+    </label><br><br>
+    <label><input type="radio" name="radio" id="idRadio1">radio1</label>
+    <label><input type="radio" name="radio" id="idRadio2">radio2</label>
+    <label><input type="radio" name="radio" id="idRadio3">radio3</label>
+    <label><input type="radio" name="radio" id="idRadio4">radio4</label><br><br>
+        <input type="button" value="confirmar" id="idButton">
+        <br><br>
+        <label><input type="checkbox" name="check1" id="idCheck1">check1</label>
+        <label><input type="checkbox" name="check2" id="idCheck2">check2</label>
+        <label><input type="checkbox" name="check3" id="idCheck3">check3</label>
+        <label><input type="checkbox" name="check4" id="idCheck4">check4</label>
+        <br><br>
+        <input type="submit" value="enviar" id="idSubmit">
+        <input type="reset" value="borrar" id="idReset">
+    </form>
+    <div id="idMostrar" class="oculto">
+        <h1>Informacion</h1>
+        <p>Texto: <span></span></p>
+        <p>Numero: <span></span></p>
+        <p>contraseña: <span></span></p>
+        <p>hidden<span></span></p>
+        <p>Color: <span></span></p>
+        <p>Fecha: <span></span></p>
+        <p>Correo: <span></span></p>
+        <p>Archivo: <span></span></p>
+        <p>TextTarea: <span></span></p>
+        <p>Opcion Seleccionada:<span></span></p>
+        <p>Opcion Seleccionada de la lista: <span></span></p>
+        <p>Radio Seleccionado:<span></span></p>
+        <p>Checkbox marcadas y valor:<span></span></p>
+    </div>
+</body>
+
+</html>

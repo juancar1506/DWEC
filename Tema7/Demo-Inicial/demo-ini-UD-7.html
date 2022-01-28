@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Formularios en JavaScript</title>
+  <script type="text/javascript" src="./eventos-ini.js" defer></script>
+    
+</head>
+<body> 
+  <h1> UD 7 : Eventos y Formularios </h1>
+
+  <form id="idFormulario">
+      <!-- ÁREA de INPUT TEXT --> 
+    <label for="idNombre">Escriba algo: </label><input type="text" name="nombre" id="idNombre"/>
+    <br>
+    <br>
+
+      <!-- ÁREA de RadioButton  : si , no , nsnc -->    
+      <label for="idOpcion_1">Si</label><input type="radio" name="opciones" id="idOpcion_1" value="Si"/>
+      <label for="idOpcion_2">No</label><input type="radio" name="opciones" id="idOpcion_2" value="No"/>
+      <label for="idOpcion_3">nsnc</label><input type="radio" name="opciones" id="idOpcion_3" value="nsnc"/>
+    <br>
+    <br>
+
+    <!-- ÁREA de checkbox  : condiciones y privacidad -->   
+    <label for="idCondiciones">He le&iacute;do y acepto las condiciones</label><input type="checkbox" name="condicones" id="idCondiciones" value="condiciones"/>
+    <label for="idPrivacidad">He le&iacute;do la pol&iacute;tica de privacidad</label><input type="checkbox" name="privacidad" id="idPrivacidad" value="privacidad"/>
+    
+    <br>
+    <br>
+
+    <!-- ÁREA de Select  : primer, segundo, tercer, cuarto -->   
+      <label for="idSelect">Lista de elementos Select </label>
+      <select name="ElementosSelect" id="idSelect">
+        <option value="primer">Primer valor</option>
+        <option value="segundo">Segundo valor</option>
+        <option value="tercer">Tercer valor</option>
+        <option value="cuarto">Cuarto valor</option>
+      </select>
+
+    <br>
+    <br>
+    
+    <!-- ÁREA de input list + DataList : primer, segundo, tercer, cuarto --> 
+    <label for="idLista">Lista de elementos DataList:</label>
+      <input list="idLista" id="idInputDataList">
+      <datalist id="idLista">
+        <option value="primer">primer</option>
+        <option value="segundo">segundo</option>
+        <option value="tercer">tercer</option>
+        <option value="cuarto">cuarto</option>
+      </datalist>
+    
+    <br>
+    <br>
+
+    <input id="idEnviar" type="button" value="Enviar"/>
+         
+  </form>
+</body>
+</html>

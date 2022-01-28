@@ -1,0 +1,32 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+form {
+    width: 200px;
+    padding: 32px;
+    background-color: #ccc;
+    border: 1px solid #000;
+    border-radius: 5px;
+}
+
+[type="text"] {
+    width: 110%;
+    padding: 8px 16px;
+    border: #000;
+    border-radius: 1px;
+}
+
+span.error {
+    color: #ff0000;
+    font-style: italic;
+    font-size: 6;
+}
+
+span.aceptar {
+    color: #005500;
+    font-style: italic;
+    font-size: 6;
+}
