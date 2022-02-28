@@ -1,0 +1,1 @@
+Para el correcto funcionamiento del hundir la flota, el primer documento html que se debe abrir es el formulario.

@@ -1,0 +1,158 @@
+body {
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+table {
+    width: 35%;
+    height: 700px;
+    background-color: blue;
+    padding: 10px;
+    border-radius: 20px;
+    margin: 20px auto;
+}
+
+td{
+    border-radius: 20px;
+    background-color: aqua;
+    cursor: pointer;
+}
+
+.agua {
+    background-color: blue;
+}
+
+.barco {
+    background-color: coral;
+}
+
+.fragatas {
+    background-color: brown;
+}
+
+.portaAviones {
+    background-color: green;
+}
+
+.lanchas {
+    background-color: gold;
+}
+
+.titulo {
+    text-transform: capitalize;
+}
+
+form {
+    margin: 60px auto;
+    width: 500px;
+    display: grid;
+
+    padding: 4%;
+    border: solid 2px;
+    box-shadow: 10px 5px 5px grey;
+}
+input {
+    width: 200px;
+    height: 1.2rem;
+    margin-top: -20px;
+}
+
+.error {
+    color: red;
+    margin-bottom: 1rem;
+}
+
+.botones {
+    display: inline;
+
+}
+
+button {
+    width: 150px;
+    padding: 0.5rem;
+    border-radius: 40px;
+    margin-left: 2%;
+    background-color: white;
+    border: black solid 2px;
+    cursor: pointer;
+}
+
+#idParar {
+    display: none;
+}
+
+button:hover {
+    background-color: black;
+    color: white;
+
+}
+
+.botones2 {
+    margin-left:25%;
+}
+
+#fragatas {
+  
+    display: grid;
+    width: 400px;
+    padding: 10px;
+}
+
+
+#lanchas {
+   
+    display: grid;
+
+}
+
+#portaAviones {
+    display:grid ;
+}
+
+
+.contenido {
+    margin: 60px auto;
+    border: gray solid 2px;
+    width: 500px;
+    padding: 20px;
+}
+
+.contenido ul {
+    list-style: none;
+}
+.contenido ul li {
+    margin-top: 20px;
+}
+
+@media (max-width: 640px) {
+    table {
+        width: 100px;
+        height: 300px;
+    }
+
+    
+
+    .botones2 {
+        margin-left:20%;
+    }
+    
+    button {
+        margin: 10px;
+    }
+}
+
+@media (max-width: 1000px) {
+    table {
+        width: 55%;
+        height: 45vh;
+
+    }
+
+    td {
+        border-radius:10px ;
+    }
+
+    .botones2 {
+        margin-left:100px;
+    }
+    
+}

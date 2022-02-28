@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Datos Jugador</title>
+    <script src="clasesHF.js" defer></script>
+    <script src="validar.js" defer></script>
+    <link rel="stylesheet" href="estilos.css">
+</head>
+<body>
+    <form action="" name="formulario" id="idFormulario">
+        <label for="idNombre">Introduzca su nombre</label><br>
+        <input type="text" name="nombre" id="idNombre" required pattern="[A-Za-z ]"/><br>
+        <span id="idNombreError" class="error"></span>
+        <label for="idApellidos">Introduzca sus apellidos</label><br>
+        <input type="text" name="apellidos" id="idApellidos" pattern="[A-Za-z ]"/><br>
+        <span id="idApellidosError" class="error"></span>
+        <label for="idEdad">Introduzca su edad</label><br>
+        <input type="number" name="edad" id="idEdad" min="0" max="120" required/><br>
+        <span id="idEdadError" class="error"></span>
+        <div class="botones">
+            <button type="submit" name="enviar" id="idEnviar">Enviar</button>
+            <button type="reset" name="limpiar" id="idLimpiar">Limpiar</button>
+        </div>
+        
+    </form>
+</body>
+</html>
